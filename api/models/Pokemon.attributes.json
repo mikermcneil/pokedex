@@ -1,0 +1,1 @@
+{"attributes":{"name":{"type":"string","defaultsTo":null},"description":{"type":"string","defaultsTo":null},"imageUrl":{"type":"string","defaultsTo":null},"types":{"type":"string","defaultsTo":null},"pokedexId":{"type":"float","defaultsTo":null}},"globalId":"Pokemon","identity":"pokemon"}

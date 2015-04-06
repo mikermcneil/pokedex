@@ -1,0 +1,66 @@
+
+<div ng-app="pokedex" ng-controller="PokedexCtrl">
+
+  <!-- Loading spinner -->
+  <div ng-show="loading">
+    <fa-app class="loading spinner full-screen">
+      <fa-modifier fa-origin="[.5, .5]" fa-align="[.5, .5]" fa-rotate-y="getRotateY()" >
+        <fa-surface fa-size="[200, 200]" fa-options="{properties: {backfaceVisibility: 'visible'}}">
+          <img src="//code.famo.us/famous-logo.png" class="logo"/>
+        </fa-surface>
+      </fa-modifier>
+    </fa-app>
+    <span>Loading...</span>
+  </div>
+  <!-- /loading spinner -->
+
+  <div ng-hide="loading || error">
+    <div class="pokedex-entry">
+      <img ng-src="{{pokemon.imageUrl}}">
+      <h1>{{pokemon.name}}</h1>
+      <h2>Affinity: {{pokemon.types}}</h2>
+      <p>{{pokemon.description}}</p>
+    </div>
+  </div>
+
+  <div ng-show="error && !loading">
+    <span>{{error}}</span>
+  </div>
+
+
+  <div>
+    <label>Enter a number 1-9</label>
+    <input type="text" ng-model="pokemonId" ng-blur="newPokemon()">
+  </div>
+</div>
+
+
+<!--
+<div ng-app="pokedex" ng-controller="PokedexCtrl">
+
+  <fa-view>
+
+    <fa-modifier ng-repeat="pokemon in pokemons" fa-size="[tile.width, tile.height]"
+      fa-animate-enter="catEnter(pokemon.t, $done)"
+      fa-animate-leave="catLeave(pokemon.t, $done)"
+      fa-translate="catTile.translate(pokemon.t, $index)"
+      fa-origin="[0, 0]"
+      fa-align="[0, 0]">
+        <fa-modifier fa-rotate-x="catTile.rotateX(pokemon.t.get())">
+          <fa-surface fa-size="[tile.width, tile.height]" class="cat-tile">
+            <div class="left-col"><img ng-src="{{pokemon.picture}}" class="cat-picture"/></div>
+            <div class="right-col">
+              <div class="cat-name">{{pokemon.name}}</div>
+              <div class="cat-location">{{pokemon.location}}</div>
+            </div>
+          </fa-surface>
+        </fa-modifier>
+      </fa-modifier>
+    </fa-modifier>
+
+  </fa-view>
+
+</div> -->
+
+
+

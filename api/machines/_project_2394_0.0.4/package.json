@@ -1,0 +1,14 @@
+{
+  "dependencies": {},
+  "machinepack": {
+    "machines": ["create_pokemon", "destroy_pokemon", "findOne_pokemon", "blueprintFind_pokemon", "find_pokemon", "update_pokemon"],
+    "machineVersions": {
+      "create_pokemon": "0.0.5",
+      "destroy_pokemon": "0.0.5",
+      "findOne_pokemon": "0.0.5",
+      "blueprintFind_pokemon": "0.0.5",
+      "find_pokemon": "0.0.5",
+      "update_pokemon": "0.0.5"
+    }
+  }
+}
